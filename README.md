@@ -96,6 +96,7 @@ CREATE TABLE loans(
 
 ## 📈 Key Findings
 
+
 ### 1. The 100K Problem 🔴
 
 **Finding**: 100,000 KES loans have a 32.1% default rate
@@ -106,6 +107,23 @@ CREATE TABLE loans(
 **Recommendation**: 
 - Cap maximum loan amount at 75K
 - OR require co-signer/additional collateral for 100K+ loans
+---
+
+## 📊 Key Findings Visualized
+
+### Default Rate by Loan Amount
+
+![Default Rate by Loan Amount](06_findings/visualizations/Loans.png)
+
+**Critical Finding**: The chart clearly shows the "100K problem" - loans of 100,000 KES (position 8) have a default rate of 32%, significantly higher than the 24% portfolio average. Meanwhile, 75K loans (position 7) perform well at 21%, making them the ideal maximum loan size.
+
+**Key Observations**:
+- 📈 Default rates increase with loan size
+- 🔴 100K loans are 8 percentage points above average
+- ✅ 75K and below maintain acceptable risk levels
+- 💡 Clear inflection point at 100K threshold
+
+---
 
 **SQL Query**:
 ```sql
